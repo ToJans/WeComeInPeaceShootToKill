@@ -7,7 +7,7 @@
     <ProjectGuid>{290BAB6C-0DCF-4492-8F45-71BE55612891}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RicardoDeSilva</RootNamespace>
+    <RootNamespace>RicardoDeSilvaBoundedContext</RootNamespace>
     <AssemblyName>RicardoDeSilva</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -39,9 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RicardoDeSilvaBoundedContext.cs" />
+    <Compile Include="Contracts\DeliveryProvisioningDetails.cs" />
+    <Compile Include="Contracts\ScheduleGeneratorType.cs" />
+    <Compile Include="Domain\Delivery.cs" />
+    <Compile Include="Domain\_Guard.cs" />
+    <Compile Include="Modules\IGenerateASchedule.cs" />
+    <Compile Include="Modules\ScheduleGenerators.cs" />
+    <Compile Include="Repositories\IPersistDeliveryChanges.cs" />
+    <Compile Include="Repositories\IQueryDeliveryState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
