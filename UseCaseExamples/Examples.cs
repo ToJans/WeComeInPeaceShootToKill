@@ -1,8 +1,7 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using BC=RicardoDeSilvaBoundedContext;
-using Shouldly;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using System;
+using BC = RicardoDeSilvaBoundedContext;
 
 namespace UseCaseExamples
 {
@@ -10,7 +9,7 @@ namespace UseCaseExamples
     public class Examples
     {
         [TestMethod]
-        public void A_dayly_appointement_for_a_thursday_should_return_that_date()
+        public void A_daily_appointement_for_a_thursday_should_return_that_date()
         {
             var deliveryDetails = 
                 new BC.Contracts.DeliveryProvisioningDetails(
@@ -26,7 +25,7 @@ namespace UseCaseExamples
         }
 
         [TestMethod]
-        public void A_dayly_appointement_for_a_saturday_should_return_the_next_monday()
+        public void A_daily_appointement_for_a_saturday_should_return_the_next_monday()
         {
             var deliveryDetails =
                 new BC.Contracts.DeliveryProvisioningDetails(
